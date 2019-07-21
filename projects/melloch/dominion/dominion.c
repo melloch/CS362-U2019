@@ -1201,7 +1201,7 @@ int ambassadorCase (struct gameState* state, int handPos, int choice1, int choic
     for (i = 0; i < state->handCount[currentPlayer]; i++){
         if (i != handPos && i == state->hand[currentPlayer][choice1] && i != choice1){
             j++;
-            i++;
+            //i++;
         }
     }
     
