@@ -56,8 +56,8 @@ int choice(int des, int passOrFail){
         playCard(MINIONINDEX, 0, des, 0, &gState);
     
     //Test that the number of Actions decreased by 1
-    printf("Testing a decreases in number of actions by 1\n");
-    passOrFail = conditionTester(gState.numActions == (testState.numActions - 1));
+    printf("Testing a decreases in number of remains 1\n");
+    passOrFail = conditionTester(gState.numActions == (testState.numActions));
 
     //Testing that the players hand count is 4
     printf("Testing players hand count is 4\n");

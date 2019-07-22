@@ -1174,7 +1174,7 @@ int minionCase (struct gameState* state, int handPos, int choice1, int choice2){
             if (i != currentPlayer){
                 if ( state->handCount[i] > 4 ){
                     //discard hand
-                    while( state->handCount[i] > 0 ){
+                    while( state->handCount[i--] > 0 ){
                         discardCard(handPos, i, state, 0);
                     }
                     

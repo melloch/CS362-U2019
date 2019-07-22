@@ -222,7 +222,7 @@ int zeroEstateBaron(int des, int passOrFail){
 
 }
 int main (){ 
-    int des, cards, passOrFail;
+    int des, passOrFail;
     passOrFail = 0;
     //Try function with estate card (both choices) and baron card (both choices)
         for (des = 0; des < 2; des++)

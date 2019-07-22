@@ -31,7 +31,7 @@ int conditionTester (int result){
 //  Test card effect                                        //
 //                                                          //
 int choice(int des, int passOrFail){
-    struct gameState gState, testState;
+    struct gameState gState;
     //Iniitalize gameState object with set infomation 
     initializeGame(PLAYERCOUNT, kingCards, RANDOMSEED, &gState);
     gState.handCount[0] = CARDSHELD;
@@ -137,7 +137,6 @@ int choice(int des, int passOrFail){
 }
 int main (){
     int passOrFail = 0;
-    int cardCount = 5;
     int i;
     //i stands for how many curse cards we want and how many we want to discard
     for (i = 0; i < 2; i++)

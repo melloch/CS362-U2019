@@ -28,15 +28,12 @@ int conditionTester (int result){
     return 1;
 }
 int choice(int passOrFail){
-    int initalDeckSet[CARDSHELD] = {curse, estate, duchy, province, copper};
-
+    int initalDeckSet[5] = {curse, estate, duchy, province, copper};
     struct gameState gState, testState;
     //Iniitalize gameState object with set infomation 
     initializeGame(PLAYERCOUNT, kingCards, RANDOMSEED, &gState);
     //Pass number of cards to gameState object
     gState.deckCount[0] = CARDSHELD;
-    //Copy deck to the players deck
-    memcpy(testDeck, initalDeckSet, sizeof(int) * CARDSHELD);
     //Copy the game state and player cards **Taken from cardtest4.c from instructor handout**
     memcpy(&testState, &gState, sizeof(struct gameState));
 //                                                          //
@@ -60,7 +57,7 @@ int choice(int passOrFail){
     passOrFail += conditionTester(counter[0] == counter[1]);
 
     printf("Testing that the deck is different");
-    passOrFail += conditionTester(ShuffleTest == 0);
+    passOrFail += conditionTester(shuffleTest == 0);
 
     shuffleTest = 0;
     for(i = 0; i < gState.deckCount[0]; i++){

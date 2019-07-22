@@ -28,7 +28,7 @@ int conditionTester (int result){
     return 1;
 }
 int choice(int winner, int passOrFail){
-    struct gameState gState, testState;
+    struct gameState gState;
     //Iniitalize gameState object with set infomation 
     initializeGame(PLAYERCOUNT, kingCards, RANDOMSEED, &gState);
 //                                                          //
@@ -43,7 +43,7 @@ int choice(int winner, int passOrFail){
     }
 
     //To pass into getWinner function
-    int players[PLAYERCOUNT] = {-1, -1, -1};
+    int players[3] = {-1, -1, -1};
 
     //Set winner with correct card
     if (winner == 0){

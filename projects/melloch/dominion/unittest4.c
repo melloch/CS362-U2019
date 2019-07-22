@@ -32,7 +32,7 @@ int conditionTester (int result){
 //                                                          //
 
 int choice (int des, int passOrFail){
-    struct gameState gState, testState;
+    struct gameState gState;
     //Iniitalize gameState object with set infomation 
     initializeGame(PLAYERCOUNT, kingCards, RANDOMSEED, &gState);
     gState.handCount[0] = CARDSHELD;
